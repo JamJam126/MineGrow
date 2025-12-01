@@ -1,0 +1,25 @@
+# User-specific files
+*.swp
+*.user
+*.userprefs
+*.suo
+*.tmp
+*.bak
+*.swp
+
+# Unity generated files
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+
+# User-specific folders
+/UserSettings/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
