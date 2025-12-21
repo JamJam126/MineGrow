@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector2(x, y);
 
         // Debug.Log(movement.sqrMagnitude > 0.01f);  
-        Debug.Log(movement.x);      
+        // Debug.Log(movement.x);      
         anim.SetFloat("MoveX", movement.x);
         anim.SetFloat("MoveY", movement.y);
         anim.SetFloat("MoveXAbs", Mathf.Abs(movement.x));
