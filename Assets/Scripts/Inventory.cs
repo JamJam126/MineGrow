@@ -37,6 +37,21 @@ public class Inventory : MonoBehaviour
     }
 
     // REMOVE CROPS
+    public bool RemoveCrop(CropType type, int amount)
+    {
+        if (!crops.ContainsKey(type) || crops[type] < amount)
+            return false; // cannot remove
+
+        crops[type] -= amount;
+
+        if (crops[type] <= 0)
+            crops.Remove(type);
+
+        OnInventoryChanged?.Invoke();
+
+        return true; 
+    }
+
     public Dictionary<CropType, int> GetAllCrops()
     {
         return new Dictionary<CropType, int>(crops);

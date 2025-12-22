@@ -4,17 +4,17 @@ using UnityEngine;
 // AH FILE NIS TEST LG TE
 public class QuickAddCrop : MonoBehaviour
 {
-    public Inventory inventory;
+    public Inventory Inventory;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
-            inventory.AddCrop(CropType.Wheat, 5);
+            Inventory.AddCrop(CropType.Wheat, 5);
 
         if (Input.GetKeyDown(KeyCode.X))
-            inventory.AddCrop(CropType.Carrot, 5);
+            Inventory.AddCrop(CropType.Carrot, 5);
 
         if (Input.GetKeyDown(KeyCode.C))
-            inventory.AddCrop(CropType.Corn, 5);
+            Inventory.AddCrop(CropType.Corn, 5);
     }
 }
