@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlantGrowth : MonoBehaviour
 {
     [Header("Plant Settings")]
+
     public Sprite emptySprite;
     public Sprite[] growthStages;
     public float timePerStage = 2f;

@@ -17,7 +17,7 @@ public class SellStand : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Ke");
+            Debug.Log("Opening Sell UI");
             OpenSellUI();
         }
     }
@@ -26,7 +26,7 @@ public class SellStand : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Ke mk hz");
+            Debug.Log("Player in range");
             playerInRange = true;
         }
     }
@@ -41,22 +41,24 @@ public class SellStand : MonoBehaviour
 
     private void OpenSellUI()
     {
-        SellCrop(CropType.Wheat, 1);
+        // Example: selling 1 carrot item
+        Item carrotItem = Resources.Load<Item>("Items/Item_Carrot"); // make sure your Item asset is here
+        SellCrop(carrotItem, 1);
     }
 
-    public void SellCrop(CropType type, int amount)
+    public void SellCrop(Item item, int amount)
     {   
         Inventory inventory = PlayerData.Instance.Inventory;
 
-        if (!inventory.RemoveCrop(type, amount))
-            return;
+        // if (!inventory.RemoveItem(item, amount))
+        //     return;
 
-        int price = GetPrice(type);
+        int price = GetPrice(item);
         PlayerData.Instance.AddMoney(price * amount);
     }
 
-    private int GetPrice(CropType type)
+    private int GetPrice(Item item)
     {
-        return 10;
+        return item != null ? item.sellPrice : 0;
     }
 }

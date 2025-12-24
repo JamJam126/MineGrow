@@ -60,21 +60,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SellStand.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventorySlotData.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventorySlotUI.cs" />
     <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\building\BuildingData.cs" />
     <Compile Include="Assets\Scripts\Crops\CropType.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\plant\PlantGrowth.cs" />
     <Compile Include="Assets\Scripts\building\ShopBuildingButton.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+=======
+    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item.cs" />
+>>>>>>> d54a387b5456c041c0acf78f4289baec501c1437
     <Compile Include="Assets\Scripts\Crops\QuickAddCrop.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\TileData.cs" />
     <Compile Include="Assets\Scripts\MapManager.cs" />
     <Compile Include="Assets\Scripts\Crops\CropData.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\ShopController.cs" />
     <Compile Include="Assets\Scripts\plant\UIManager.cs" />
     <Compile Include="Assets\Scripts\building\BuildManager.cs" />
+=======
+>>>>>>> d54a387b5456c041c0acf78f4289baec501c1437
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>

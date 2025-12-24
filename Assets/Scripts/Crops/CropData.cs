@@ -8,4 +8,5 @@ public class CropData : ScriptableObject
     public CropType type;
     public int sellPrice;
 
+    public Item harvestItem;
 }
