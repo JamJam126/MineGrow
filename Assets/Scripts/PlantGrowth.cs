@@ -3,13 +3,14 @@ using UnityEngine;
 public class PlantGrowth : MonoBehaviour
 {
     [Header("Plant Settings")]
+    public Inventory Inventory;
     public Sprite emptySprite;
     public Sprite[] growthStages;
     public float timePerStage = 2f;
 
     [Header("UI")]
-    public GameObject seedPanel;        // modal panel
-    public GameObject backgroundPanel;  // full-screen transparent background
+    public GameObject seedPanel; 
+    public GameObject backgroundPanel; 
 
     private SpriteRenderer sr;
     private int currentStage = 0;
@@ -110,6 +111,7 @@ public class PlantGrowth : MonoBehaviour
 
     void ResetPlant()
     {
+        Inventory.AddCrop(CropType.Carrot, 3);
         isPlanted = false;
         isCollectible = false;
         timer = 0f;
