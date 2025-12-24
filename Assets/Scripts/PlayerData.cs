@@ -1,18 +1,24 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
 
     public Inventory Inventory { get; private set; }
-
+    public TextMeshProUGUI goldText;
     public int balance { get; private set; } = 0;
     public event Action OnMoneyChanged;
 
+    void Start()
+    {
+        UpdateGoldUI();
+    }
+
     void Update()
     {
-        Debug.Log("Player Balance: " + balance); 
+
     }
 
     private void Awake() {
@@ -29,6 +35,12 @@ public class PlayerData : MonoBehaviour
 
     public void AddMoney(int amount) {
         balance += amount;
+        UpdateGoldUI();
         OnMoneyChanged?.Invoke();
+    }
+
+    void UpdateGoldUI()
+    {
+        goldText.text = balance.ToString();
     }
 }

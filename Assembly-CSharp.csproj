@@ -66,15 +66,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlantGrowth.cs" />
     <Compile Include="Assets\Scripts\SellStand.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventorySlotData.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventorySlotUI.cs" />
     <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Crops\CropType.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\Scripts\Crops\QuickAddCrop.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\TileData.cs" />
     <Compile Include="Assets\Scripts\MapManager.cs" />
     <Compile Include="Assets\Scripts\Crops\CropData.cs" />
-    <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>

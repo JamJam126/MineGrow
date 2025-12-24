@@ -4,6 +4,7 @@ public class PlantGrowth : MonoBehaviour
 {
     [Header("Plant Settings")]
     public Inventory Inventory;
+    public Item carrotItem;
     public Sprite emptySprite;
     public Sprite[] growthStages;
     public float timePerStage = 2f;
@@ -111,7 +112,10 @@ public class PlantGrowth : MonoBehaviour
 
     void ResetPlant()
     {
-        Inventory.AddCrop(CropType.Carrot, 3);
+        if (Inventory != null && carrotItem != null)
+        {
+            Inventory.AddItem(carrotItem, 3); 
+        }
         isPlanted = false;
         isCollectible = false;
         timer = 0f;
