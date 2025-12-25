@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SellStand : MonoBehaviour
 {
+    public Item carrotItem;
     private bool playerInRange = false;
 
     // Start is called before the first frame update
@@ -41,8 +42,6 @@ public class SellStand : MonoBehaviour
 
     private void OpenSellUI()
     {
-        // Example: selling 1 carrot item
-        Item carrotItem = Resources.Load<Item>("Items/Item_Carrot"); // make sure your Item asset is here
         SellCrop(carrotItem, 1);
     }
 
@@ -50,8 +49,8 @@ public class SellStand : MonoBehaviour
     {   
         Inventory inventory = PlayerData.Instance.Inventory;
 
-        // if (!inventory.RemoveItem(item, amount))
-        //     return;
+        if (!inventory.RemoveItem(item, amount))
+            return;
 
         int price = GetPrice(item);
         PlayerData.Instance.AddMoney(price * amount);

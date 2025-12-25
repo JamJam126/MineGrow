@@ -29,7 +29,6 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current Carrot: " + slots[0].amount); 
     }
 
     void Awake()
@@ -82,6 +81,35 @@ public class Inventory : MonoBehaviour
         Debug.LogWarning("Inventory is full! Could not add " + item.itemName);
         return false;
     }
+
+    public bool RemoveItem(Item item, int amount)
+    {
+        if (item == null || amount <= 0) return false;
+
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item == item)
+            {
+                if (slots[i].amount < amount)
+                    return false; 
+
+                slots[i].amount -= amount;
+
+                if (slots[i].amount <= 0)
+                {
+                    slots[i].item = null;
+                    slots[i].amount = 0;
+                }
+
+                OnInventoryChanged?.Invoke();
+                return true;
+            }
+        }
+
+        return false;  
+    }
+
+
 
     // REMOVE CROPS
     public bool RemoveCrop(CropType type, int amount)
