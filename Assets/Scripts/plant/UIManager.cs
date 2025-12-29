@@ -37,10 +37,16 @@ public class UIManager : MonoBehaviour
 
     public void OnSeedButtonClicked()
     {
-        if (currentPlant != null)
+        bool hasCarrotSeeds = PlayerData.Instance.Inventory.HasItem(
+            PlayerData.Instance.Inventory.carrotSeed
+        );
+        
+        if (currentPlant != null && hasCarrotSeeds)
         {
             currentPlant.PlantSeed();
         }
+
+        else Debug.Log("You don't have enough carrot seed!");
 
         ClosePanels();
     }

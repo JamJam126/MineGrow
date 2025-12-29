@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public Item carrot;
     public Item wheat;
     public Item corn;
+    public Item carrotSeed;
 
     private Dictionary<CropType, int> crops = new Dictionary<CropType, int>(); 
     public event Action OnInventoryChanged;
@@ -40,8 +41,21 @@ public class Inventory : MonoBehaviour
         slots[0].item = carrot; slots[0].amount = 5;
         slots[1].item = wheat; slots[1].amount = 3;
         slots[2].item = corn;  slots[2].amount = 7;
+        slots[3].item = carrotSeed; slots[3].amount = 20;
     }
     
+    public bool HasItem(Item item, int amount = 1)
+    {
+        int total = 0;
+
+        foreach (var slot in slots)
+        {
+            if (slot.item == item)
+                total += slot.amount;
+        }
+
+        return total >= amount;
+    }
 
     // ADD CROP
     public void AddCrop(CropType type, int amount)

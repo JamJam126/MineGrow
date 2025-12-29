@@ -4,8 +4,11 @@ public class PlantGrowth : MonoBehaviour
 {
     [Header("Plant Settings")]
 
+    public Inventory Inventory;
     public Sprite emptySprite;
     public Sprite[] growthStages;
+    public Item carrotItem;
+    public Item carrotSeed;
     public float timePerStage = 2f;
 
     private SpriteRenderer sr;
@@ -61,10 +64,15 @@ public class PlantGrowth : MonoBehaviour
             currentStage = 0;
             sr.sprite = growthStages[0];
         }
+        PlayerData.Instance.Inventory.RemoveItem(carrotSeed, 1);
     }
 
     void ResetPlant()
     {
+        if (carrotItem != null)
+        {
+            PlayerData.Instance.Inventory.AddItem(carrotItem, 4);
+        }
         isPlanted = false;
         isCollectible = false;
         timer = 0f;

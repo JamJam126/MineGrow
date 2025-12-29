@@ -143,12 +143,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d9fe370764b754f957f71f0f21a6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: {fileID: 0}
   emptySprite: {fileID: 0}
   growthStages:
   - {fileID: 21300000, guid: 2ecb60db72877fe45ad8a7220e2da2ca, type: 3}
   - {fileID: 21300000, guid: 4d97cb43fb05bbf4ebb6dad78f95253c, type: 3}
   - {fileID: 21300000, guid: 93bc13d5c8509fb45a04a248ebdc2f06, type: 3}
   - {fileID: 21300000, guid: 759ed4532fd027c4793684ecbe26eea8, type: 3}
+  carrotItem: {fileID: 11400000, guid: 64a521d0ad990694daa3c84e17492404, type: 2}
+  carrotSeed: {fileID: 11400000, guid: 2e270ada6ca69bf4da32b1d46aae87b3, type: 2}
   timePerStage: 2
 --- !u!1 &5820037304917502190
 GameObject:
@@ -248,10 +251,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d9fe370764b754f957f71f0f21a6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: {fileID: 0}
   emptySprite: {fileID: 0}
   growthStages:
   - {fileID: 21300000, guid: 2ecb60db72877fe45ad8a7220e2da2ca, type: 3}
   - {fileID: 21300000, guid: 4d97cb43fb05bbf4ebb6dad78f95253c, type: 3}
   - {fileID: 21300000, guid: 93bc13d5c8509fb45a04a248ebdc2f06, type: 3}
   - {fileID: 21300000, guid: 759ed4532fd027c4793684ecbe26eea8, type: 3}
+  carrotItem: {fileID: 0}
+  carrotSeed: {fileID: 0}
   timePerStage: 2

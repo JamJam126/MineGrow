@@ -8,7 +8,7 @@ public class PlayerData : MonoBehaviour
 
     public Inventory Inventory { get; private set; }
     public TextMeshProUGUI goldText;
-    public int balance { get; private set; } = 0;
+    public int balance { get; private set; } = 30;
     public event Action OnMoneyChanged;
 
     void Start()
@@ -35,6 +35,13 @@ public class PlayerData : MonoBehaviour
 
     public void AddMoney(int amount) {
         balance += amount;
+        UpdateGoldUI();
+        OnMoneyChanged?.Invoke();
+    }
+
+    public void ReduceMoney(int amount)
+    {
+        balance -= amount;
         UpdateGoldUI();
         OnMoneyChanged?.Invoke();
     }

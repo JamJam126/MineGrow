@@ -94,6 +94,8 @@ public class BuildManager : MonoBehaviour
             Quaternion.identity
         );
 
+        PlayerData.Instance.ReduceMoney(currentBuilding.price);
+
         CancelPlacement();
     }
 
